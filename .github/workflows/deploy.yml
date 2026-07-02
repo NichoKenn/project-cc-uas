@@ -1,8 +1,10 @@
 name: Automated Deployment CI/CD
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: self-hosted
@@ -13,6 +15,7 @@ jobs:
 
       - name: Deploy Apps via Docker Compose
         run: |
+          rsync -av ./web/ ~/cc_uas/app-layer/web/
           cd ~/cc_uas/app-layer
           docker-compose pull
           docker-compose up -d --build
