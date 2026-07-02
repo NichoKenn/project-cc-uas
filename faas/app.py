@@ -12,12 +12,22 @@ MINIO_CONFIG = {
     "secret_key": "admin@123",
     "secure": False
 }
+
+MINIO_CLIENT = Minio(
+    MINIO_CONFIG["endpoint"],
+    access_key=MINIO_CONFIG["access_key"],
+    secret_key=MINIO_CONFIG["secret_key"],
+    secure=MINIO_CONFIG["secure"]
+)
+
 DB_CONFIG = {
     "host": "10.55.100.198",
     "user": "root",
     "password": "uas@cc123",
-    "database": "cc_db"
+    "database": "cc_db",
+    "port": 3306
 }
+
 BUCKET_NAME = "images"
 
 @app.route('/webhook-minio', methods=['POST'])

@@ -1,14 +1,22 @@
 version: '3.8'
 
 services:
-  web_frontend:
+  php-app:
+    build: .
+    container_name: php_fpm_container
+    volumes:
+      - ./web:/var/www/html
+
+  web-frontend:
     image: nginx:alpine
     container_name: web_frontend
-    restart: always
     ports:
       - "8081:80"
     volumes:
-      - ./web:/usr/share/nginx/html
+      - ./web:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - php-app
 
   faas_python:
     build: ./faas
@@ -16,6 +24,7 @@ services:
     restart: always
     ports:
       - "5001:5001"
+    restart: always
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.49.1
