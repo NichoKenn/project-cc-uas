@@ -16,5 +16,5 @@ jobs:
       - name: Deploy Apps via Docker Compose
         run: |
           cd ~/cc_uas/app-layer
-          docker compose pull
-          docker compose up -d --build
+          docker-compose pull
+          docker-compose up -d --build
