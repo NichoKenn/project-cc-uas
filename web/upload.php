@@ -29,6 +29,7 @@ if ($_FILES['photo']['name']) {
                 'ACL'    => 'public-read',
             ]);
 
+            
             // $url = 'http://10.55.100.198:9000/images/' . $filename;
 
             // $conn = mysqli_connect("10.55.100.198", "root", "uas@cc123", "cc_db", 3306);
