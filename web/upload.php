@@ -29,13 +29,13 @@ if ($_FILES['photo']['name']) {
                 'ACL'    => 'public-read',
             ]);
 
-            $url = 'http://10.55.100.198:9000/images/' . $filename;
+            // $url = 'http://10.55.100.198:9000/images/' . $filename;
 
-            $conn = mysqli_connect("10.55.100.198", "root", "uas@cc123", "cc_db", 3306);
+            // $conn = mysqli_connect("10.55.100.198", "root", "uas@cc123", "cc_db", 3306);
 
-            $filename_escaped = mysqli_escape_string($conn, $filename);
-            $url_escaped = mysqli_escape_string($conn, $url);
-            mysqli_query($conn, "INSERT INTO images (filename, minio_url) VALUES ('$filename_escaped', '$url_escaped')");
+            // $filename_escaped = mysqli_escape_string($conn, $filename);
+            // $url_escaped = mysqli_escape_string($conn, $url);
+            // mysqli_query($conn, "INSERT INTO images (filename, minio_url) VALUES ('$filename_escaped', '$url_escaped')");
 
             $message = "Upload berhasil!";
         }
