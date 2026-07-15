@@ -11,7 +11,7 @@
         <input type="file" name="photo">
         <input type="submit" value="Upload" name="btnsubmit">
     </form>
-    <h2>Galeri</h2>
+    <h2>Galeri CC</h2>
     <?php
         $conn = mysqli_connect("10.55.100.198", "root", "uas@cc123", "cc_db", 3306);
         $images = mysqli_query($conn, "SELECT * FROM images ORDER BY id DESC");
