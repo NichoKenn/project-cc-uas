@@ -2,7 +2,7 @@
 Repository ini digunakan untuk melakukan otomatisasi CI/CD deployment pada sebuah cloud server dengan Arsitektur App Layer, Data Layer, dan Edge Layer.
 
 **Diagram Arsitektur:**
-<img width="492" height="793" alt="diagram" src="https://github.com/user-attachments/assets/fd352cf0-da74-4be4-b1af-c63e5050c2b4" />
+<br><img width="492" height="793" alt="diagram" src="https://github.com/user-attachments/assets/fd352cf0-da74-4be4-b1af-c63e5050c2b4" />
 
 **Tech Stack:**
 - **Docker** → Containerization
